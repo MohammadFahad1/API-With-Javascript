@@ -10,9 +10,13 @@ const displayUser = users => {
         const userDiv = document.createElement('div');
         console.log(user);
         userDiv.innerHTML = `
-        <h3>User Name</h3>
-        <p>User Info</p>
+        <h3>User Name: ${user.name.title} ${user.name.first} ${user.name.last}</h3>
+        <p>User Email: ${user.email}</p>
+        <p>User Gender: ${user.gender}</p>
+        <p>User Age: ${user.dob.age}</p>
+        <p>User Location: ${user.location.city}</p>
         `;
         usersContainer.appendChild(userDiv);
     }
 }
+loadUser();
