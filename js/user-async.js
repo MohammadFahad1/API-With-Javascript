@@ -20,5 +20,12 @@ const loadUserAsync = async () => {
 }
 
 const displayUser = (data) => {
+    const userElement = document.getElementById('users');
+    userElement.innerHTML = `
+        <h1>${data.name.title} ${data.name.first} ${data.name.last}</h1>
+        <h3>${data.location.city}, ${data.location.state}, ${data.location.country}</h3>
+        <h3>${data.cell}</h3>
+        <h3>${data.email}</h3>
+    `;
     console.log(data);
 }
